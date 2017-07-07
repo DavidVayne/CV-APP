@@ -1,0 +1,16 @@
+{
+  "customUi" : {
+    "items" : {
+      "color" : "#fff",
+      "layout" : "grid"
+    },
+    "stats" : {
+      "order" : {
+        "fo" : 1,
+        "age" : 2,
+        "ine" : 3,
+        "cha" : 4
+      }
+    }
+  }
+}

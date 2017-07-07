@@ -1,0 +1,13 @@
+<div ng-controller="CommentsController">
+  <ul>
+    <li ng-repeat="commentaire in commentaires">
+      {{commentaire.dateAjout}} {{commentaire.message}}
+    </li>
+  </ul>
+
+  <form ng-submit="sendCommentaire()">
+    <textarea ng-model="newCommentaire">Placeholder</textarea>
+    <button ng-click="sendCommentaire()">Envoyer</button>
+  </form>
+
+</div>

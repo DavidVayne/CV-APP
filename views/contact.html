@@ -1,0 +1,36 @@
+<div id="contact" class="row">
+  <form id="form-contact" class="col">
+    <div class="form-group">
+      <label for="mail">Adresse email</label>
+      <input ng-model="contact.mail" type="text" class="form-control" id="mail"  aria-describedby="emailHelp" placeholder="Entrez votre adresse email">
+      <small id="emailHelp" class="form-text text-muted">Votre adresse email ne sera pas divulgée.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="nom">Nom et prénom</label>
+      <input ng-model="contact.infos" type="text" class="form-control" id="nom"  placeholder="Entrez votre nom et prénom">
+    </div>
+
+    <div class="form-group">
+      <label for="demandeSelect">Votre demande concerne : </label>
+      <select ng-model="contact.demande" class="form-control" id="demandeSelect">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea ng-model="contact.message" class="form-control" id="message" rows="3">Entrez votre message ...</textarea>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+    </div>
+
+  </form>
+  <div class="col" id="previsu-contact">
+    {{contact}}
+  </div>
+</div>

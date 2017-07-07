@@ -1,0 +1,78 @@
+﻿lier le projet à gitHub
+déclarer un domaine
+réserver simple hosting mogodb/nodejs
+liste compétences
+liste expériences
+liste projets
+
+compétences : note - utilisation
+Langages :
+HTML : 5/5 - 5/5
+JavaScript : 5/5 - 5/5
+CSS : 5/5 - 5/5
+PHP : 4/5 - 4/5
+Apache : 3/5 - 2/5
+AutoIt : 4/5 - 4/5
+Lua : 4/5 - 4/5
+SQL : 4/5 - 5/5
+Bat : 2/5 - 1/5
+C/C++ : 3/5 - 1/5
+Java : 3/5 - 1/5
+XML : 4/5 - 1/5
+JSON : 5/5 - 5/5
+LESS : 5/5 - 5/5
+
+
+Framework & API :
+jQuery : 5/5 - 4/5
+Angular Js : 4/5 - 5/5
+Node Js : 3/5 - 3/5
+WordPress : 5/5 - 5/5
+BootStrap : 5/5 - 5/5
+Foundation : 3/5 - 2/5
+Ionic : 4/5 - 3.5/5
+Google API : 4/5 - 4/5
+Firebase : 4/5 - 5/5
+OVH API : 3/5 - 2/5
+
+Logiciels & multimedias :
+Word : 4/5 - 3/5
+Excel : 4/5 - 3/5
+PowerPoint : 3/5 - 3/5
+Photoshop : 2.5/5 - 2/5
+Microsoft SQL Server Report Builder
+
+Outils de gestion :
+MeisterTask : 5/5 - 5/5
+GitHub : 4/5 - 2/5
+npm : 4/5 - 3/5
+bower : 3/5 - 1/5
+koban : 4/5 - 5/5
+
+
+Editeurs & systèmes d'exploitation :
+Windows : 4/5 - 5/5
+Linux : 3/5 - 2/5
+Atom : 5/5 - 5/5
+Brackets : 5/5 - 2/5
+Notepad++ : 5/5 - 2/5
+Sublime Text : 4/5 - 3/5
+Eclipse : 4/5 - 1/5
+
+Langues :
+Anglais écrit : 4.5/5 - 5/5
+Anglais oral : 3.5/5 - 2-5
+Français écrit : 4.5/5 - 5/5
+Français oral : 5/5 - 5/5
+
+
+Projets pertinents :
+Application PEA
+Site Web Confluence Events
+Site Web City Aventure
+Macro autoIt
+
+Compétences exemples :
+Responsive design (adaptation de site web, mobile first)
+Expérience client (UI/UX design)
+Dynamique et interactif

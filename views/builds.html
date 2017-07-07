@@ -1,0 +1,31 @@
+<!-- LECTURE ONLY LISTE DES BUILDS AUTH REQUIRED -->
+<div id="builds-list">
+  <h2>Créer et ouvrir la page</h2>
+  <ul class="list-persos">
+    <li ng-click="createBuild(key)" ng-repeat="(key,perso) in $root.listePersos">
+      <img src="{{perso.visuel}}" />
+    </li>
+  </ul>
+  <ul>
+    <li ng-repeat="build in builds | filter:{'type': filterVar}">
+       <a href="#/build/{{build.$id}}">{{build.titre}} de type {{$root.listePersos[build.type].name}}</a>
+       <span ng-if="build.dateCrea">
+         crée le
+         <span>{{build.dateCrea | amDateFormat:'DD/MM/YYYY à HH:mm'}}</span>
+       </span>
+       <a class="button" href="#/build/{{build.$id}}/edit">Modifier</a>
+       <a class="button" ng-click="deleteBuild(build.$id)">Supprimer</a>
+    </li>
+  </ul>
+  <div ng-if="builds.length == 0">
+    Vous n'avez crée aucun build
+  </div>
+  <ul id="creationFilterUl">
+    <li ng-click="toggleFilter('', $event)">
+      Tous
+    </li>
+    <li ng-click="toggleFilter(key, $event)" ng-repeat="(key,perso) in $root.listePersos">
+      {{perso.name}}
+    </li>
+  </ul>
+</div>

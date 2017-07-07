@@ -1,0 +1,35 @@
+{
+  "menu" : {
+      "home" : {
+        "titre" : "Accueil",
+        "description" : "description",
+        "url" : "/#/home",
+        "footer" : true,
+        "header" : true,
+        "auth" : false
+      },
+      "contact" : {
+        "titre" : "Contact",
+        "description" : "description",
+        "url" : "/#/contact",
+        "footer" : true,
+        "header" : false,
+        "auth" : false
+      },
+      "competences" : {
+        "titre" : "Items",
+        "description" : "description",
+        "url" : "#",
+        "dropdown" : {
+          "item1" : {
+            "titre" : "Item 1",
+            "description" : "description",
+            "url" : "/#/item"
+          }
+        },
+        "footer" : true,
+        "header" : true,
+        "auth" : false
+      }
+  }
+}
