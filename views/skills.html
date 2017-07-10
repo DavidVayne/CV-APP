@@ -1,0 +1,68 @@
+<div id="skills">
+  <nav class="level">
+    <div id="disposition" class="level-item has-text-centered">
+      <i ng-click="changeDisposition('card')" ng-class="classDisposition('card')" class="fa fa-id-card-o" aria-hidden="true"></i>
+      <i ng-click="changeDisposition('grid')" ng-class="classDisposition('grid')"class="fa fa-th-large" aria-hidden="true"></i>
+    </div>
+    <div class="level-item has-text-centered">
+        <div class="control has-icons-left has-icons-right">
+          <input class="input " type="text" placeholder="Recherchez ..." ng-model="search.value">
+          <span class="icon is-small is-left">
+            <i class="fa fa-search"></i>
+          </span>
+        </div>
+    </div>
+
+    <div class="level-item has-text-centered">
+      <a ng-click="toggleFilter($event)" class="button is-info is-outlined">
+        <span class="icon"><i class="fa fa-filter"></i></span>
+        <span>Filtres</span>
+      </a>
+    </div>
+  </nav>
+  <div ng-show="skillsFilters.show" id="skillsFilters">
+    Filtres
+  </div>
+
+  <div id="cards">
+    <div class="has-text-centered" ng-hide="filteredSkills.length">
+      <p>Aucun résultat ne correspond au criète de recherche {{search.value}}</p>
+    </div>
+
+    <div class="card skill-card" ng-repeat="skill in filteredSkills =(skills | filter:{ tags : search.value })">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img src="../assets/logos/{{skill.logo}}" alt="logo {{skill.titre}}">
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">{{skill.titre}}</p>
+            <p class="subtitle is-6"><span class="tag" ng-class="skill.cat">{{skill.cat}}</span></p>
+          </div>
+        </div>
+
+        <div ng-show="$root.reglages.disposition == 'card'" class="content">
+          {{skill.description}}
+        </div>
+      </div>
+      <footer class="card-footer">
+        <div class="card-footer-item">
+          <span ng-repeat="note in [1,2,3,4,5]">
+            <i ng-if="note > skill.niveau && note - skill.niveau != 0.5" class="fa fa-star-o" aria-hidden="true"></i>
+            <i ng-if="note <= skill.niveau" class="fa fa-star" aria-hidden="true"></i>
+            <i ng-if="note - skill.niveau == 0.5" class="fa fa-star-half-o" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="card-footer-item">
+          <span ng-repeat="note in [1,2,3,4,5]">
+            <i ng-if="note > skill.utilisation" class="fa fa-star-o" aria-hidden="true"></i>
+            <i ng-if="note <= skill.utilisation" class="fa fa-star" aria-hidden="true"></i>
+          </span>
+        </div>
+      </footer>
+    </div>
+
+  </div>
+</div>

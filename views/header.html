@@ -1,28 +1,8 @@
 <header ng-controller="HeaderCtrl">
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">ggwp</a>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item"  ng-show="page.header" ng-repeat="page in menu" ng-if="!page.auth || user != null ">
-          <a class="nav-link" href="{{page.url}}">{{page.titre}}</a>
-        </li>
-      </ul>
-      <span class="navbar-text">
-        <div  class="login-button">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">Contact</button>
-        </div>
-      </span>
-    </div>
-  </nav>
-
-
   <nav class="navbar">
   <div class="navbar-brand">
-    <a class="navbar-item" href="http://bulma.io">
-      <img src="assets/logos/nodejs.png" alt="Bulma: a modern CSS framework based on Flexbox" width="100" height="auto">
+    <a class="navbar-item" href="#/home">
+      <img src="assets/logos/nodejs.png" alt="logo site web cv en ligne" width="100" height="auto">
     </a>
 
     <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
@@ -54,99 +34,6 @@
           <a ng-repeat="(k,sousPage) in page.dropdown" class="navbar-item " href="{{sousPage.url}}">
             {{$root.trad[k]}}
           </a>
-        </div>
-      </div>
-
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link  is-active" href="/documentation/overview/start/">
-          Docs
-        </a>
-        <div class="navbar-dropdown ">
-          <a class="navbar-item " href="/documentation/overview/start/">
-            Overview
-          </a>
-          <a class="navbar-item " href="http://bulma.io/documentation/modifiers/syntax/">
-            Modifiers
-          </a>
-          <a class="navbar-item " href="http://bulma.io/documentation/grid/columns/">
-            Grid
-          </a>
-          <a class="navbar-item " href="http://bulma.io/documentation/elements/box/">
-            Elements
-          </a>
-
-            <a class="navbar-item is-active" href="http://bulma.io/documentation/components/breadcrumb/">
-              Components
-            </a>
-
-          <a class="navbar-item " href="http://bulma.io/documentation/layout/container/">
-            Layout
-          </a>
-          <hr class="navbar-divider">
-          <div class="navbar-item">
-            <div>version <p class="has-text-info">0.4.3</p></div>
-          </div>
-        </div>
-      </div>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link " href="http://bulma.io/blog/">
-          Blog
-        </a>
-        <div id="blogDropdown" class="navbar-dropdown " data-style="width: 18rem;">
-
-            <a class="navbar-item" href="/2017/03/10/new-field-element/">
-              <div class="navbar-content">
-                <p>
-                  <small class="has-text-info">10 Mar 2017</small>
-                </p>
-                <p>New field element (for better controls)</p>
-              </div>
-            </a>
-
-            <a class="navbar-item" href="/2016/04/11/metro-ui-css-grid-with-bulma-tiles/">
-              <div class="navbar-content">
-                <p>
-                  <small class="has-text-info">11 Apr 2016</small>
-                </p>
-                <p>Metro UI CSS grid with Bulma tiles</p>
-              </div>
-            </a>
-
-            <a class="navbar-item" href="/2016/02/09/blog-launched-new-responsive-columns-new-helpers/">
-              <div class="navbar-content">
-                <p>
-                  <small class="has-text-info">09 Feb 2016</small>
-                </p>
-                <p>Blog launched, new responsive columns, new helpers</p>
-              </div>
-            </a>
-
-          <a class="navbar-item" href="http://bulma.io/blog/">
-            More posts
-          </a>
-          <hr class="navbar-divider">
-          <div class="navbar-item">
-            <div class="navbar-content">
-              <div class="level is-mobile">
-                <div class="level-left">
-                  <div class="level-item">
-                    <strong>Stay up to date!</strong>
-                  </div>
-                </div>
-                <div class="level-right">
-                  <div class="level-item">
-                    <a class="button is-rss is-small" href="http://bulma.io/atom.xml">
-                      <span class="icon is-small">
-                        <i class="fa fa-rss"></i>
-                      </span>
-                      <span>Subscribe</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -186,7 +73,7 @@
             </a>
           </p>
           <p class="control">
-            <a class="button is-primary" href="https://github.com/jgthms/bulma/archive/0.4.3.zip">
+            <a class="button is-primary" href="#/contact/">
               <span class="icon">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
               </span>

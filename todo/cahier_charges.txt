@@ -76,3 +76,12 @@ Compétences exemples :
 Responsive design (adaptation de site web, mobile first)
 Expérience client (UI/UX design)
 Dynamique et interactif
+
+
+"dropdown" : {
+  "item1" : {
+    "titre" : "Item 1",
+    "description" : "description",
+    "url" : "/#/item"
+  }
+},

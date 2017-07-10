@@ -22,70 +22,42 @@ html, html body {
     color:grey;
   }
 }
+.search-skills {
+  width: 250px;
+  margin: auto;
+  input {
+    display:block;
+  }
+}
+#cards {
+  display: flex;
+    flex-flow: row wrap;
+  .card {
+    flex:1 1 auto;
+    margin: 10px;
+  }
 
-p.nom-spell {
-  text-align:center;
-  font-size:1.2rem;
-  font-weight:bold;
 }
-#uiMenu {
-  position:fixed;
-  bottom:0;
-  right:0;
-  left:0;
-  width:100%;
-  .liste-ui {
-    list-style:none;
-    padding:0;
-    margin:0;
-    text-align: right;
-    li {
-      display:inline-block;
-      margin:0.7em;
-      &.active {
-        text-decoration:underline;
-      }
-    }
-  }
+.tag {
+  cursor:pointer;
 }
-.dndDraggingSource {
-  display:none;
-}
-#buildEdit {
-  margin-bottom:4em;
-}
-.list-items  {
-  display:block;
-  .itemType {
-    display: inline-block;
-    margin: 0.5em;
-    border: 1px solid black;
-    vertical-align: top;
-    padding: 0.5em;
-  }
-}
-#itemsUi {
-  .list-items {
-    li {
-      cursor:pointer;
-    }
-  }
-}
+.tag.Langages {
+  background-color:#000;
+  color:#fff;
 
-/* BUILDS CSS */
-#creationFilterUl {
-  list-style:none;
-  li {
+}
+#disposition {
+  i {
+    margin:0 5px;
     display:inline-block;
-    margin:0.5em;
-    border:1px solid black;
     cursor:pointer;
-    padding:0.5em;
-
-    &.active {
-      background-color:#edefed;
+    &:hover {
+      color:#3273dc;
+    }
+    &.is-active {
+      color:#3273dc;
     }
   }
-
 }
-/* END BUILDS CSS */
+.skill-card {
+}

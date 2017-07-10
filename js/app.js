@@ -62,6 +62,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
       templateUrl: 'views/contact.html',
       controller: 'ContactCtrl'
     })
+    .when('/skills', {
+      templateUrl: 'views/skills.html',
+      controller: 'SkillsCtrl'
+    })
     .when('/sets', {
       templateUrl: 'views/sets.html',
       controller: 'SetsCtrl'

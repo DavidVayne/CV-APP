@@ -16,17 +16,10 @@
         "header" : false,
         "auth" : false
       },
-      "competences" : {
-        "titre" : "Items",
+      "skills" : {
+        "titre" : "Skills",
         "description" : "description",
-        "url" : "#",
-        "dropdown" : {
-          "item1" : {
-            "titre" : "Item 1",
-            "description" : "description",
-            "url" : "/#/item"
-          }
-        },
+        "url" : "/#/skills",
         "footer" : true,
         "header" : true,
         "auth" : false
