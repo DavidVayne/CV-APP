@@ -1,36 +1,89 @@
-<div id="contact" class="row">
-  <form id="form-contact" class="col">
-    <div class="form-group">
-      <label for="mail">Adresse email</label>
-      <input ng-model="contact.mail" type="text" class="form-control" id="mail"  aria-describedby="emailHelp" placeholder="Entrez votre adresse email">
-      <small id="emailHelp" class="form-text text-muted">Votre adresse email ne sera pas divulgée.</small>
-    </div>
+<section class="hero">
+  <div class="hero-body">
+    <h3 class="title is-3 has-text-centered">Formulaire de contact </h3>
+    <div id="contact" class="columns">
+      <div class="column is-offset-2 is-4 ">
 
-    <div class="form-group">
-      <label for="nom">Nom et prénom</label>
-      <input ng-model="contact.infos" type="text" class="form-control" id="nom"  placeholder="Entrez votre nom et prénom">
-    </div>
+        <form class="box" id="form-contact" ng-submit="processForm($event)">
+          <div class="field">
+            <label class="label">Nom et prénom</label>
+            <p class="control">
+              <input class="input" ng-model="contact.infos" type="text" placeholder="Indiquez votre nom et votre prénom">
+            </p>
+          </div>
 
-    <div class="form-group">
-      <label for="demandeSelect">Votre demande concerne : </label>
-      <select ng-model="contact.demande" class="form-control" id="demandeSelect">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="message">Message</label>
-      <textarea ng-model="contact.message" class="form-control" id="message" rows="3">Entrez votre message ...</textarea>
-    </div>
-    <div class="text-center">
-      <button type="submit" class="btn btn-primary">Envoyer</button>
-    </div>
+          <div class="field">
+            <label class="label">Adresse email</label>
+            <p class="control has-icons-left">
+              <input class="input" type="text" ng-model="contact.mail" placeholder="Indiquez votre adresse email">
+              <span class="icon is-small is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+            </p>
+            <p class="help is-danger">Ceci n'est pas une adresse email valide</p>
+          </div>
 
-  </form>
-  <div class="col" id="previsu-contact">
-    {{contact}}
+          <div class="field">
+            <label class="label">Votre demande concerne</label>
+            <p class="control">
+              <span class="select">
+            <select ng-model="contact.demande">
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </span>
+            </p>
+          </div>
+
+          <div class="field">
+            <label class="label">Message</label>
+            <p class="control">
+              <textarea ng-model="contact.message" class="textarea" placeholder="Indiquez votre message"></textarea>
+            </p>
+          </div>
+
+          <div class="field is-grouped has-text-centered">
+            <p class="control">
+              <button ng-click="resetForm()" class="button is-link">Vider les champs</button>
+            </p>
+            <p class="control">
+              <button type="submit" class="submit-contact button is-info">Envoyer</button>
+            </p>
+          </div>
+
+        </form>
+
+      </div>
+      <div class="column is-4">
+        <div id="previsu-contact">
+          <div class="content">
+
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  Prévisualisation de votre message
+                </p>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <h4>Bonjour,</h4>
+                  <p style="white-space:pre-wrap" ng-bind-html="contact.message"></p>
+                  <p ng-if="contact.demande != '' && contact.demande != null">
+                    Ma demande concerne <strong>{{contact.demande}}</strong>
+                  </p>
+                  <h5>A propos de moi</h5>
+                  <p>Nom et prénom : <strong>{{contact.infos}}</strong><br/> Vous pouvez me recontacter à l'adresse email <strong>{{contact.mail}}</strong></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="has-text-centered">
+            <button ng-click="processForm($event)" class="submit-contact button is-info">Envoyer</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>

@@ -71,7 +71,9 @@ app.controller('SkillsCtrl', function($scope, $firebase, $rootScope, $location) 
     $scope.skillsFilters.show = !$scope.skillsFilters.show;
   }
 });
-
+app.controller('KnowledgeCtrl', function($scope, $firebase, $rootScope, $location) {
+  console.log('know');
+});
 app.controller('UiMenuCtrl', function($scope, $firebase, $rootScope, $location, UserService, $cookies) {
   console.log('uimenu');
   $scope.changeUi = function(id) {
@@ -215,9 +217,19 @@ app.controller('FooterCtrl', function($scope, $firebase, $rootScope, $location, 
 
 app.controller('ContactCtrl', function($scope, $firebase, $rootScope, $location, $http) {
   $scope.contactForm = {};
-  $scope.processForm = function() {
+
+  $scope.processForm = function($event) {
     // traiter le formulaire
-    console.log('traitement du formulaire');
+    console.log($event);
+    $('.submit-contact').addClass('is-loading');
+  }
+  $scope.resetForm = function() {
+    $scope.contact = {
+      "infos" : "",
+      "mail" : "",
+      "demande" : "",
+      "message" : ""
+    }
   }
 });
 

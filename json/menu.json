@@ -23,6 +23,14 @@
         "footer" : true,
         "header" : true,
         "auth" : false
+      },
+      "knowledge" : {
+        "titre" : "Knowledge",
+        "description" : "description",
+        "url" : "/#/knowledge",
+        "footer" : true,
+        "header" : true,
+        "auth" : false
       }
   }
 }

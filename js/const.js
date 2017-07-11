@@ -22,13 +22,15 @@ const TRADUCTION = {
     "contactTitle" : "Contact",
     "home" : "Accueil",
     "contact" : "Contact",
-    "skills" : "Compétences"
+    "skills" : "Compétences",
+    "knowledge" : "Connaissances"
   },
   "EN" : {
     "contactTitle" : "Contact Us",
     "home" : "Home",
     "contact" : "Contact Us",
-    "skills" : "Skills"
+    "skills" : "Skills",
+    "knowledge" : "Knowledge"
   }
 }
 
