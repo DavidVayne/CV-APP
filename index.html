@@ -8,6 +8,7 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.css"  />
+  <link rel="stylesheet" href="libs/css/animate.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
@@ -29,6 +30,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.1/angular-sanitize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-cookies.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
   <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
@@ -62,12 +64,11 @@
       <div ng-include="'views/header.html'"></div>
     </div>
     <div class="dynamic" style="position:relative;">
-      <div class="loading" ng-if="loading" style="position:absolute; width:100%; height:100%; background-color:#fff;">
+      <div class="loading" ng-if="$root.loading" style="position:absolute; width:100%; height:100%; background-color:#fff;">
         <i class="fa fa-spin fa-circle-o-notch" aria-hidden="true"></i>
       </div>
       <main ng-view></main>
     </div>
-
     <div class="static" id="footer">
       <div ng-include="'views/footer.html'"></div>
     </div>

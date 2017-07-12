@@ -1,0 +1,38 @@
+<div id="showcases">
+  <div class="card showcase" ng-repeat="show in showcases">
+    <div class="card-image">
+      <img width="200" height="auto" src="{{show.images.visuel}}" alt="Image">
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4">{{show.titre}}</p>
+          <p class="subtitle is-6"><span ng-repeat="(key,val) in show.stack" class="tag is-info {{val}}">{{val}}</span></p>
+        </div>
+      </div>
+
+      <div class="content">
+        <p class="has-text-left">
+          {{show.description}}
+        </p>
+        <p class="has-text-left">
+          {{show.content}}<br />
+          <a ng-repeat="hash in show.tags">#{{hash}} </a>
+        </p>
+      </div>
+      <div class="has-text-centered">
+        <a class="button is-primary">
+          <span class="icon"><i class="fa fa-twitter"></i></span>
+          <span>En savoir plus</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</div>

@@ -39,7 +39,8 @@ function setVal(value, defaultValue){
    return (value === undefined) ? defaultValue : value;
 }
 
-var app = angular.module('myApp', ['ngRoute', 'firebase', 'ngCookies', 'ngDragDrop', 'angularMoment', 'ngSanitize']);
+var app = angular.module('myApp', ['ngRoute', 'firebase', 'ngCookies', 'ngDragDrop', 'angularMoment', 'ngSanitize', 'ngAnimate']);
+
 
 app.constant('USERS_URL', 'https://makeanapp-f2e6e.firebaseio.com/users');
 
@@ -69,6 +70,14 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     .when('/knowledge', {
       templateUrl: 'views/knowledge.html',
       controller: 'KnowledgeCtrl'
+    })
+    .when('/showcase', {
+      templateUrl: 'views/showcase.html',
+      controller: 'ShowcaseCtrl'
+    })
+    .when('/career', {
+      templateUrl: 'views/career.html',
+      controller: 'CareerCtrl'
     })
     .when('/sets', {
       templateUrl: 'views/sets.html',

@@ -1,7 +1,7 @@
 {
   "menu" : {
       "home" : {
-        "titre" : "Accueil",
+        "titre" : "Home",
         "description" : "description",
         "url" : "/#/home",
         "footer" : true,
@@ -28,6 +28,22 @@
         "titre" : "Knowledge",
         "description" : "description",
         "url" : "/#/knowledge",
+        "footer" : true,
+        "header" : true,
+        "auth" : false
+      },
+      "showcase" : {
+        "titre" : "Showcase",
+        "description" : "description",
+        "url" : "/#/showcase",
+        "footer" : true,
+        "header" : true,
+        "auth" : false
+      },
+      "career" : {
+        "titre" : "Career",
+        "description" : "description",
+        "url" : "/#/career",
         "footer" : true,
         "header" : true,
         "auth" : false

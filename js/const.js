@@ -23,14 +23,18 @@ const TRADUCTION = {
     "home" : "Accueil",
     "contact" : "Contact",
     "skills" : "Compétences",
-    "knowledge" : "Connaissances"
+    "knowledge" : "Connaissances",
+    "showcase" : "Travaux",
+    "career" : "Parcours"
   },
   "EN" : {
     "contactTitle" : "Contact Us",
     "home" : "Home",
     "contact" : "Contact Us",
     "skills" : "Skills",
-    "knowledge" : "Knowledge"
+    "knowledge" : "Knowledge",
+    "showcase" : "Showcases",
+    "career" : "Career"
   }
 }
 
@@ -38,14 +42,14 @@ const SKILLS = [
   {
      "titre" : "HTML",
      "description" : "description du langagerergregregregregregge html",
-     "cat" : "Langages",
+     "cat" : ["Langages", "Contenu", "Web"],
      "tags" : "forme html htlm hypertext markup langages html5 web balise site",
      "niveau" : 4,
      "utilisation" : 5,
      "logo" : "html.png"
   },
   {
-     "titre" : "HTML",
+     "titre" : "CSS",
      "description" : "description du langage html",
      "cat" : "Langages",
      "tags" : "forme html htlm hypertext markup langages html5 web balise site",
@@ -54,7 +58,7 @@ const SKILLS = [
      "logo" : "html.png"
   },
   {
-     "titre" : "HTML",
+     "titre" : "JavaScript",
      "description" : "don du langage html",
      "cat" : "Langages",
      "tags" : "forme html htlm hypertext markup langages html5 web balise site",
@@ -63,7 +67,7 @@ const SKILLS = [
      "logo" : "html.png"
   },
   {
-     "titre" : "HTML",
+     "titre" : "PHP",
      "description" : "descriazdazdazdzaption du langage html",
      "cat" : "Langages",
      "tags" : "forme html htlm hypertext markup langages html5 web balise site",
@@ -72,7 +76,7 @@ const SKILLS = [
      "logo" : "html.png"
   },
   {
-     "titre" : "HTML",
+     "titre" : "jQuery",
      "description" : "deszadazdription du langage html",
      "cat" : "Langages",
      "tags" : "forme html htlm hypertext markup langages html5 web balise site",

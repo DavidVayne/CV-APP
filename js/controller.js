@@ -4,89 +4,21 @@ app.controller('GlobalCtrl', function($scope, $firebase, $rootScope, $location, 
   $rootScope.db = Database;
   $rootScope.loading = false;
   $rootScope.names = NAMES_TEMPLATE;
-  $rootScope.customUi = CUSTOM_UI;
   $rootScope.reglages = {
-    "disposition" : 'grid'
+    "disposition": 'grid'
   }
 
   Auth.$onAuthStateChanged(function(firebaseUser) {
     $rootScope.user = firebaseUser;
-    if($rootScope.user) {
+    if ($rootScope.user) {
       UserService($rootScope.user.uid).$bindTo($scope, "userData");
     }
   });
 
-  $rootScope.ui = {
-    "spells" : {
-      "name" : "spells",
-      "bool" : $cookies.get("spells") || true
-    },
-    "stats" : {
-      "name" : "stats",
-      "bool" : $cookies.get("stats") || true
-    },
-    "sets" : {
-      "name" : "sets",
-      "bool" : $cookies.get("sets") || true
-    },
-    "infos" : {
-      "name" : "infos",
-      "bool" : $cookies.get("infos") || true
-    },
-    "items" : {
-      "name" : "items",
-      "bool" : $cookies.get("items") || true
-    },
-    "build" : {
-      "name" : "build",
-      "bool" : $cookies.get("build") || true
-    }
-  }
 });
 
 app.controller('HomeCtrl', function($scope, $firebase, $rootScope, $location, UserService) {
 
-});
-
-app.controller('SkillsCtrl', function($scope, $firebase, $rootScope, $location) {
-  $scope.Number = window.Number;
-  $scope.skills = SKILLS;
-  $scope.search = {
-    "value" : ""
-  }
-  $scope.skillsFilters = {
-    "show" : false
-  }
-  $scope.changeDisposition = function(type) {
-    $rootScope.reglages.disposition = type;
-  }
-
-  $scope.classDisposition = function(type) {
-    if(type == $rootScope.reglages.disposition) {
-      return 'is-active';
-    }
-  }
-  $scope.toggleFilter = function($event) {
-    $($event.currentTarget).toggleClass('is-outlined');
-    $scope.skillsFilters.show = !$scope.skillsFilters.show;
-  }
-});
-app.controller('KnowledgeCtrl', function($scope, $firebase, $rootScope, $location) {
-  console.log('know');
-});
-app.controller('UiMenuCtrl', function($scope, $firebase, $rootScope, $location, UserService, $cookies) {
-  console.log('uimenu');
-  $scope.changeUi = function(id) {
-    console.log(id);
-    if( $rootScope.ui[id].bool == "false") {
-      $rootScope.ui[id].bool = "true";
-    }
-    else {
-      $rootScope.ui[id].bool = "false";
-    }
-    $cookies.put(id, $rootScope.ui[id].bool);
-    console.log($rootScope.ui);
-  }
 });
 
 app.controller('ProfileCtrl', function($scope, $firebase, $rootScope, $location, Auth, currentAuth, UserService) {
@@ -94,11 +26,6 @@ app.controller('ProfileCtrl', function($scope, $firebase, $rootScope, $location,
     UserService(currentAuth.uid).$bindTo($scope, "profil");
   }
 });
-
-app.controller('ItemsCtrl', function($scope, $firebase, $rootScope, $location, Auth, Items, Categories) {
-});
-
-
 
 app.controller('LoginCtrl', function($scope, $firebase, $rootScope, $location, Auth) {
   $scope.loginModel = {};
@@ -187,13 +114,16 @@ app.controller('LoginCtrl', function($scope, $firebase, $rootScope, $location, A
   }
 });
 
-app.controller('HeaderCtrl', function($scope, $firebase, $rootScope, $location, $http, Auth) {
+app.controller('HeaderCtrl', function($scope, $firebase, $rootScope, $location, $http, Auth, $cookies) {
   $http.get('../json/menu.json').then(function(result) {
     $rootScope.menu = result.data.menu;
-    console.log(result.data.menu);
   });
+  if ($cookies.get('langue')) {
+    $rootScope.langue = $cookies.get('langue');
+  } else {
+    $rootScope.langue = 'FR';
+  }
 
-  $rootScope.langue = 'FR';
   $rootScope.trad = TRADUCTION[$rootScope.langue];
 
   $scope.signOut = function() {
@@ -202,15 +132,57 @@ app.controller('HeaderCtrl', function($scope, $firebase, $rootScope, $location, 
     });
   }
   $scope.changeLang = function() {
-      $rootScope.trad = TRADUCTION[$rootScope.langue];
+    $rootScope.trad = TRADUCTION[$rootScope.langue];
+    $cookies.put('langue', $rootScope.langue);
   }
 
   $scope.hasDrop = function(value) {
-    if(value) {
+    if (value) {
       return 'has-dropdown is-hoverable';
     }
   }
 
+  $scope.toggleMenuMobile = function($event) {
+    $($event.currentTarget).toggleClass('is-active');
+    $('#nav').toggleClass('is-active');
+  }
+
+});
+
+app.controller('SkillsCtrl', function($scope, $firebase, $rootScope, $location) {
+  $scope.Number = window.Number;
+  $scope.skills = SKILLS;
+  $scope.search = {
+    "value": ""
+  }
+  $scope.skillsFilters = {
+    "show": false
+  }
+  $scope.changeDisposition = function(type) {
+    $rootScope.reglages.disposition = type;
+  }
+
+  $scope.classDisposition = function(type) {
+    if (type == $rootScope.reglages.disposition) {
+      return 'is-active';
+    }
+  }
+  $scope.toggleFilter = function($event) {
+    $($event.currentTarget).toggleClass('is-outlined');
+    $scope.skillsFilters.show = !$scope.skillsFilters.show;
+  }
+});
+
+app.controller('KnowledgeCtrl', function($scope, $firebase, $rootScope, $location) {
+  console.log('know');
+});
+
+app.controller('ShowcaseCtrl', function($scope, $firebase, $rootScope, $location, $http) {
+  $http.get('../json/showcase.json').then(function(result) {
+    $scope.showcases = result.data.showcase;
+  });
+});
+app.controller('CareerCtrl', function($scope, $firebase, $rootScope, $location, $http) {
 });
 
 app.controller('FooterCtrl', function($scope, $firebase, $rootScope, $location, $http) {});
@@ -225,59 +197,10 @@ app.controller('ContactCtrl', function($scope, $firebase, $rootScope, $location,
   }
   $scope.resetForm = function() {
     $scope.contact = {
-      "infos" : "",
-      "mail" : "",
-      "demande" : "",
-      "message" : ""
+      "infos": "",
+      "mail": "",
+      "demande": "",
+      "message": ""
     }
-  }
-});
-
-
-
-app.controller('BuildIdCtrl', function($scope, $firebase, $rootScope, $location, $http, BuildId, $routeParams) {
-  $rootScope.loading = true;
-  $scope.id = $routeParams.id;
-  $scope.build = BuildId($scope.id);
-
-  $scope.build.$loaded().then(function() {
-    console.log($scope.build);
-    $rootScope.loading = false;
-  });
-});
-
-
-
-app.controller('ItemsTypeCtrl', function($scope, $firebase, $rootScope, $location, $http, $routeParams, currentAuth, Items, BuildId) {
-  $rootScope.loading = true;
-  $scope.buildId = $routeParams.build;
-
-  $scope.build = BuildId($scope.buildId);
-
-  $scope.typeId = $routeParams.type;
-
-  $scope.items = Items('type' + $scope.typeId, 30);
-  $scope.items.$loaded().then(function() {
-    $rootScope.loading = false;
-  });
-
-  $scope.addToBuild = function(item, key) {
-    var type = "type" + $scope.typeId;
-
-    // construction de l'objet
-    if (!$scope.build.items) {
-      $scope.build['items'] = {}
-    }
-    $scope.build.items[type] = [];
-    item['idItem'] = parseInt(key);
-    $scope.build.items[type].push(item);
-
-    // sauvegarde de l'objet
-    $scope.build.$save().then(function(ref) {
-      // retour au build
-      history.back();
-    }, function(err) {
-      console.log(err);
-    });
   }
 });

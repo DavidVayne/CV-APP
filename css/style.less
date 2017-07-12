@@ -1,64 +1,188 @@
-html, html body {
-  font-family:'Heebo' !important;
-  height:100%;
+html,
+html body {
+    font-family: 'Heebo' !important;
+    height: 100%;
 }
-html { overflow-y: hidden; }
+
+html {
+    overflow-y: hidden;
+}
+
 #home {
-  display:block;
+    display: block;
+    background-color: #edefed;
+
+    .wrapper {
+        width: 98%;
+        margin: auto;
+    }
 }
+
+.is-invisible {
+    visibility: hidden !important;
+}
+
+#dynamic {
+    margin-top: 0.719rem;
+}
+
 .loading {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  text-align:center;
-  background-color:#fff;
-  i {
-    font-size:3rem;
-    text-align:center;
-    margin:2em auto;
-    color:grey;
-  }
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #fff;
+
+    i {
+        font-size: 3rem;
+        text-align: center;
+        margin: 2em auto;
+        color: grey;
+    }
 }
+
 .search-skills {
-  width: 250px;
-  margin: auto;
-  input {
-    display:block;
-  }
+    width: 250px;
+    margin: auto;
+
+    input {
+        display: block;
+    }
 }
+
 #cards {
-  display: flex;
+    display: flex;
     flex-flow: row wrap;
-  .card {
-    flex:1 1 auto;
-    margin: 10px;
-  }
 
+    .card {
+        flex: 1 1 auto;
+        margin: 10px;
+    }
 }
+
 .tag {
-  cursor:pointer;
+    cursor: pointer;
 }
-.tag.Langages {
-  background-color:#000;
-  color:#fff;
 
+.tag.Langages {
+    background-color: #000;
+    color: #fff;
 }
+
 #disposition {
-  i {
-    margin:0 5px;
-    display:inline-block;
-    cursor:pointer;
-    &:hover {
-      color:#3273dc;
+    i {
+        margin: 0 5px;
+        display: inline-block;
+        cursor: pointer;
+
+        &:hover {
+            color: #3273dc;
+        }
+
+        &.is-active {
+            color: #3273dc;
+        }
     }
-    &.is-active {
-      color:#3273dc;
-    }
-  }
 }
-.skill-card {
+
+.skill-card {}
+
+.temp-ui {
+    background-color: #fff;
+    min-height: 200px;
+    width: 100%;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.tag.WordPress {
+    background-color: #1d8cbe;
+}
+
+.tag.PhP {
+    background-color: #777bb3;
+}
+
+.tag.AngularJS {
+    background-color: #de2e31;
+}
+
+.tag.mySQL {
+    background-color: #e48e00;
+}
+
+.tag.jQuery {
+    background-color: #1069ae;
+}
+
+.tag.HTML {
+    background-color: #f16529;
+}
+
+.tag.CSS {
+    background-color: #1c88c7;
+}
+
+.tag.JSON {
+    background-color: #414141;
+}
+
+#showcases {
+    text-align: center;
+    background-color: #edefed;
+
+    .showcase {
+        display: inline-block;
+        vertical-align: top;
+        width: 500px;
+        max-width: 97%;
+        margin: 1%;
+        overflow: hidden;
+    }
+}
+@background_color_1: #ffffff;
+@border_color_1: #757575;
+@border_color_2: #75757d;
+
+.timeline {
+    border-left: 2px solid @border_color_1;
+    position: relative;
+
+    .time-item {
+        border-color: @border_color_1;
+        padding-bottom: 1px;
+        position: relative;
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        &:after {
+            background-color: @background_color_1;
+            border-color: @border_color_2;
+            border-radius: 10px;
+            border-style: solid;
+            border-width: 2px;
+            bottom: 0;
+            content: "";
+            height: 14px;
+            left: 0;
+            margin-left: -8px;
+            position: absolute;
+            top: 5px;
+            width: 14px;
+        }
+
+        &:before {
+            content: " ";
+            display: table;
+        }
+
+        .item-content {
+            margin-bottom: 15px;
+            margin-left: 15px;
+        }
+    }
 }

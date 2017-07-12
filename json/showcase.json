@@ -1,0 +1,60 @@
+{
+  "showcase" : {
+    "1" : {
+      "titre" : "Confluence Events",
+      "description" : "Confluence Events est un collectif de professionnels spécialisés dans l'organisation de séminaires, conventions, incentives, réunions à Lyon Confluence.",
+      "content" : "Lancement du site web, développement d'un outil d'administration personnalisé du site web.",
+      "stack" : ["WordPress", "PhP", "AngularJS", "HTML", "CSS", "jQuery", "mySQL"],
+      "url" : "http://confluence-events.com",
+      "type" : "Pro",
+      "tags" : ["Frond End", "Back End", "Gestion de projet", "SEO"],
+      "images" : {
+        "visuel" : "src",
+        "desktop" : "src",
+        "mobile" : "src"
+      }
+    },
+    "2" : {
+      "titre" : "La Cabane de Lyon",
+      "description" : "Espace de réunion et de réception atypique, idéal pour vos séminaires d’entreprise. Cette cabane contemporaine nichée sous la toiture d’Azium® possède une terrasse en belvédère offrant un point de vue panoramique sur tout Azium®.",
+      "content" : "Création du site sur WordPress depuis un thème vierge. Interface one page immersive et enjeux SEO.",
+      "stack" : ["WordPress", "PhP", "HTML", "CSS", "jQuery", "mySQL"],
+      "url" : "http://www.la-cabane-de-lyon.fr/",
+      "type" : "Pro",
+      "tags" : ["Frond End", "Back End", "SEO"],
+      "images" : {
+        "visuel" : "src",
+        "desktop" : "src",
+        "mobile" : "src"
+      }
+    },
+    "3" : {
+      "titre" : "Blog Emocio",
+      "description" : "Le Blog Emocio réunit des articles de plusieurs catégories de l'agence événementielle Emocio.",
+      "content" : "Création du site sur WordPress depuis un thème vierge. Articles administrables sans toucher au code, création d'un formulaire newsletter rataché à l'outil Marketing Koban.",
+      "stack" : ["WordPress", "PhP", "HTML", "CSS", "jQuery", "mySQL"],
+      "url" : "http://blog.emocio.fr/",
+      "type" : "Pro",
+      "tags" : ["Frond End", "Back End", "Marketing"],
+      "images" : {
+        "visuel" : "src",
+        "desktop" : "src",
+        "mobile" : "src"
+      }
+    },
+    "4" : {
+      "titre" : "Outil de génération de newsletter",
+      "description" : "Un outil disponible en ligne permettant la génération personnalisée de plus d'une quinzaine de template de newsletter.",
+      "content" : "Création de l'outil 100% en ligne, connexion via le Gmail si l'adresse est au domaine @adventuregroup.fr. Aperçu en ligne, modifications à la volée, envoi de test, stockage de toutes les générations de newsletter, téléchargement de code html, génération de newsletter.",
+      "stack" : ["PhP", "HTML", "CSS", "jQuery", "mySQL"],
+      "url" : "http://blog.emocio.fr/",
+      "type" : "Pro",
+      "tags" : ["Frond End", "Back End", "SaaS", "Newsletter"],
+      "images" : {
+        "visuel" : "src",
+        "desktop" : "src",
+        "mobile" : "src"
+      }
+    }
+  }
+}
