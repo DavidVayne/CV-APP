@@ -18,7 +18,12 @@ app.controller('GlobalCtrl', function($scope, $firebase, $rootScope, $location, 
 });
 
 app.controller('HomeCtrl', function($scope, $firebase, $rootScope, $location, UserService) {
-
+  $scope.changeTab = function(id, $event) {
+    $('.tabs-profil .level-item').removeClass('active');
+    $($event.currentTarget).addClass('active');
+    $('.tabs-content .tab').removeClass('active');
+    $(id).addClass('active');
+  }
 });
 
 app.controller('ProfileCtrl', function($scope, $firebase, $rootScope, $location, Auth, currentAuth, UserService) {

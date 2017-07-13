@@ -52,6 +52,7 @@ app.run(["$rootScope", "$location", function($rootScope, $location, amMoment) {
   });
 }]);
 
+
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix('');
   $routeProvider
@@ -79,14 +80,6 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
       templateUrl: 'views/career.html',
       controller: 'CareerCtrl'
     })
-    .when('/sets', {
-      templateUrl: 'views/sets.html',
-      controller: 'SetsCtrl'
-    })
-    .when('/set/:id', {
-      templateUrl: 'views/setId.html',
-      controller: 'SetIdCtrl'
-    })
     .when('/itemsType/:type/:build', {
       templateUrl: 'views/itemsType.html',
       controller: 'ItemsTypeCtrl',
@@ -95,70 +88,6 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
           return Auth.$waitForSignIn();
         }]
       }
-    })
-    .when('/item/:type/:id', {
-      templateUrl: 'views/itemId.html',
-      controller: 'ItemIdCtrl'
-    })
-    .when('/items', {
-      templateUrl: 'views/items.html',
-      controller: 'ItemsCtrl'
-    })
-    .when('/weapons', {
-      templateUrl: 'views/weapons.html',
-      controller: 'WeaponsCtrl'
-    })
-    .when('/sets', {
-      templateUrl: 'views/sets.html',
-      controller: 'SetsCtrl'
-    })
-    .when('/dashboard', {
-      templateUrl: 'views/dashboard.html',
-      controller: 'DashboardCtrl'
-    })
-    .when('/builds', {
-      templateUrl: 'views/builds.html',
-      controller: 'BuildsCtrl',
-      resolve: {
-        "currentAuth": ["Auth", function(Auth) {
-          return Auth.$requireSignIn();
-        }]
-      }
-    })
-    .when('/build/:id', {
-      templateUrl: 'views/buildId.html',
-      controller: 'BuildIdCtrl'
-    })
-    .when('/build/:id/edit', {
-      templateUrl: 'views/buildEdit.html',
-      controller: 'BuildEditCtrl',
-      resolve: {
-        "currentAuth": ["Auth", function(Auth) {
-          return Auth.$requireSignIn();
-        }]
-      }
-    })
-    .when('/profile', {
-      templateUrl: 'views/profile.html',
-      controller: 'ProfileCtrl',
-      resolve: {
-        "currentAuth": ["Auth", function(Auth) {
-          return Auth.$requireSignIn();
-        }]
-      }
-    })
-    .when('/compare', {
-      templateUrl: 'views/buildsCompare.html',
-      controller: 'CompareCtrl',
-      resolve: {
-        "currentAuth": ["Auth", function(Auth) {
-          return Auth.$requireSignIn();
-        }]
-      }
-    })
-    .when('/resultCompare/:firstBuild/:secondBuild', {
-      templateUrl: 'views/resultCompare.html',
-      controller: 'ResultCompareCtrl'
     })
     .otherwise({
       redirectTo: '/home'

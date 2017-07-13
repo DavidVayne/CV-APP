@@ -11,11 +11,16 @@ html {
 #home {
     display: block;
     background-color: #edefed;
+    padding-top: 1.5em;
 
     .wrapper {
         width: 98%;
         margin: auto;
     }
+}
+
+.has-text-justify {
+    text-align: justify;
 }
 
 .is-invisible {
@@ -95,8 +100,6 @@ html {
     background-color: #fff;
     min-height: 200px;
     width: 100%;
-    font-size: 4rem;
-    text-align: center;
 }
 
 .tag.WordPress {
@@ -142,6 +145,100 @@ html {
         max-width: 97%;
         margin: 1%;
         overflow: hidden;
+    }
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.is-white {
+    color: #fff !important;
+}
+
+#profil {
+    display: block;
+    width: 100%;
+
+    .header-profil {
+        background-color: #3498db;
+        display: block;
+        position: relative;
+
+        .wrap-img {
+            display: inline-block;
+            width: 40%;
+            margin: auto;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: 1em auto;
+            overflow: hidden;
+
+            img {
+                display: block;
+                margin: auto;
+            }
+        }
+
+        .reseaux {
+            display: inline-block;
+            width: 90%;
+            margin: 1em auto;
+        }
+
+        .content-profil {}
+    }
+
+    .tabs-profil {
+      margin:0;
+        .level-item {
+            background-color: #d35400;
+            cursor: pointer;
+            color: #fff;
+            padding: 0.9em;
+
+            i {
+                color: #fff;
+            }
+
+            &.active {
+                color: #d35400;
+                background-color: #fff;
+
+                i {
+                    color: #d35400;
+                }
+            }
+        }
+    }
+
+    .tabs-content {
+        display: flex;
+        position: relative;
+        overflow: auto;
+        min-height: 230px;
+        justify-content: center;
+        align-items: center;
+        .tab {
+          display: block;
+          background-color: #ffffff;
+          position: absolute;
+          width: 100%;
+          opacity: 0;
+          transition: opacity 0.4s;
+          padding: 1em;
+          width: 100%;
+          left: 0;
+          right: 0;
+            &.active {
+                opacity: 1;
+                transition: opacity 0.4s;
+            }
+        }
     }
 }
 @background_color_1: #ffffff;

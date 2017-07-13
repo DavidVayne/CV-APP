@@ -1,0 +1,65 @@
+<div id="profil">
+  <div class="header-profil">
+    <div class="wrap-img">
+      <img src="assets/img/user.png" width="100%" height="auto" />
+    </div>
+    <div class="content content-profil">
+      <div class="flex-box">
+        <h5 class="is-white">Nom et prénom</h5>
+        <p class="is-white">Description</p>
+      </div>
+      <div class="reseaux">
+        <div class="columns">
+          <div class="column">
+            <i class="is-white fa fa-facebook" aria-hidden="true"></i>
+          </div>
+          <div class="column">
+            <i class="is-white fa fa-facebook" aria-hidden="true"></i>
+          </div>
+          <div class="column">
+            <i class="is-white fa fa-facebook" aria-hidden="true"></i>
+          </div>
+          <div class="column">
+            <i class="is-white fa fa-facebook" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- END HEADER PROFIL -->
+
+  <div class="level tabs-profil">
+    <div ng-click="changeTab('#tab-profil',$event)" class="level-item active has-text-centered">
+      <i class="fa fa-user" aria-hidden="true"></i>
+    </div>
+    <div ng-click="changeTab('#tab-skill',$event)" class="level-item has-text-centered">
+        <i class="fa fa-trophy" aria-hidden="true"></i>
+    </div>
+    <div ng-click="changeTab('#tab-contact',$event)" class="level-item has-text-centered">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <div class="tabs-content">
+    <div id="tab-profil" class="tab active">
+  <div class="content">
+    <h4 class="has-text-left">Blabla</h4>
+    <p class="has-text-justify">
+      Sed tamen haec cum ita tutius observentur, quidam vigore artuum inminuto rogati ad nuptias ubi aurum dextris manibus cavatis offertur, inpigre vel usque Spoletium pergunt. haec nobilium sunt instituta.
+    </p>
+  </div>
+    </div>
+    <div id="tab-skill" class="tab">
+      <progress class="progress" value="15" max="100">15%</progress>
+      <progress class="progress is-primary" value="30" max="100">30%</progress>
+      <progress class="progress is-info" value="45" max="100">45%</progress>
+      <progress class="progress is-success" value="60" max="100">60%</progress>
+      <progress class="progress is-warning" value="75" max="100">75%</progress>
+      <progress class="progress is-danger" value="90" max="100">90%</progress>
+    </div>
+    <div id="tab-contact" class="tab">
+3
+    </div>
+  </div>
+</div>

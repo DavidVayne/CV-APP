@@ -21,7 +21,7 @@
         "description" : "description",
         "url" : "/#/skills",
         "footer" : true,
-        "header" : true,
+        "header" : false,
         "auth" : false
       },
       "knowledge" : {
@@ -29,7 +29,7 @@
         "description" : "description",
         "url" : "/#/knowledge",
         "footer" : true,
-        "header" : true,
+        "header" : false,
         "auth" : false
       },
       "showcase" : {
@@ -37,7 +37,7 @@
         "description" : "description",
         "url" : "/#/showcase",
         "footer" : true,
-        "header" : true,
+        "header" : false,
         "auth" : false
       },
       "career" : {
@@ -45,7 +45,7 @@
         "description" : "description",
         "url" : "/#/career",
         "footer" : true,
-        "header" : true,
+        "header" : false,
         "auth" : false
       }
   }
